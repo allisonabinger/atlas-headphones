@@ -1,0 +1,33 @@
+/* Style Sheet - Building Blocks of Web Page */
+
+
+/* Variables ====================== */
+
+:root {
+	/* color variables */
+	
+	--color-primary:  #FF6565;
+	--color-black:  #090909;
+	--color-white: #ffffff;
+	--color-grey: #a0a0a0;
+	--color-light-grey: #f3f3f3;
+	--color-dark-grey: #353535;
+	--color-navy:  #071629;
+
+	/* font variables */
+
+	--font-size-small: 12px;
+	--font-size-medium: 16px;
+	--font-size-xlarge: 32px;
+	--font-size-button: 14px;
+	--font-family-body: 'Source Sans Pro', 'Lato', sans-serif;
+}
+
+/* Styling ===================== */
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+

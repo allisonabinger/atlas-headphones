@@ -17,5 +17,14 @@ header {
 	position: absolute;
 	display: flex;
 	justify-content: space-between;
-	
+	width: 1103px;
+	height: 29px;
+	margin-left: 201px;
+	margin-right: 199px;
+	margin-top: 30px;
+
+}
+
+.banner {
+	display: flex;
 }
