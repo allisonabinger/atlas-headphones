@@ -1,30 +1,38 @@
-/* Style sheet Task 0 */
+/* Style Sheet - Building Blocks of Web Page */
 
-/* Body (page content) ************/
+
+/* Variables ====================== */
+
+:root {
+	/* color variables */
+	
+	--color-primary:  #FF6565;
+	--color-black:  #090909;
+	--color-white: #ffffff;
+	--color-grey: #a0a0a0;
+	--color-light-grey: #f3f3f3;
+	--color-dark-grey: #353535;
+	--color-navy:  #071629;
+
+	/* font variables */
+
+	--font-size-small: 12px;
+	--font-size-medium: 16px;
+	--font-size-xlarge: 32px;
+	--font-size-button: 14px;
+	--font-family-body: 'Source Sans Pro', 'Lato', sans-serif;
+}
+
+/* Styling ===================== */
 
 body {
-	display: flex;
-	flex-direction: column;
-	width: 1400px;
-	height: 3006px;
-	margin: 0;
+	width: 100vw;
+	height: 100vh;
 }
 
-
-/* Header **************/
-
-header {
-	position: absolute;
+.menu {
+	max-width: 1000px;
 	display: flex;
-	justify-content: space-between;
-	width: 1103px;
-	height: 29px;
-	margin-left: 201px;
-	margin-right: 199px;
-	margin-top: 30px;
-
-}
-
-.banner {
-	display: flex;
+	justify-content: center;
+	
 }
