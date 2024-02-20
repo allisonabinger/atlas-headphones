@@ -1,0 +1,21 @@
+/* Style sheet Task 0 */
+
+/* Body (page content) ************/
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 1400px;
+	height: 3006px;
+	margin: 0;
+}
+
+
+/* Header **************/
+
+header {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	
+}
