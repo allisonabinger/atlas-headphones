@@ -30,4 +30,9 @@ body {
 	height: 100vh;
 }
 
-
+.menu {
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	
+}
