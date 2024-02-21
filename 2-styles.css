@@ -417,7 +417,9 @@
 		}
 	}
 
-	/* Results Section ========= */
+		/* Results Section ========= */
+
+		/* This is where I leave you because I cannot code anymore lol. */
 
 	#res {
 		background-image: url(images/headphones_hero_2.jpg);
@@ -451,4 +453,11 @@
 		/* text-align: center; */
 		width: 637px;
 		margin-left: 382px;
+	}
+
+	.pent-grid {
+		display: flex;
+		justify-content: center;
+		gap: 77px;
+		margin-bottom: 80px;
 	}
