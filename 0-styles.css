@@ -15,6 +15,7 @@
 
 	--font-size-small: 12px;
 	--font-size-medium: 16px;
+	--font-size-large: 24px;
 	--font-size-xlarge: 32px;
 	--font-size-button: 14px;
 	--font-family-primary: 'Source Sans Pro', 'Lato', sans-serif;
@@ -48,7 +49,7 @@
 	}
 
 
-	.headphones-logo {
+	#header-logo {
 		width: 160px;
 		height: auto;
 	}
@@ -69,7 +70,7 @@
 		position: relative;
 	}
 
-	.menu-links {
+	#menu-links {
 		display: inline-flex;
 		margin: auto 0;
 		padding: 0;
@@ -89,7 +90,7 @@
 		text-decoration: none;
 	}
 
-	.menu-links li {
+	#menu-links li {
 		margin: auto 1.25rem;
 		list-style-type: none;
 		text-decoration: none;
@@ -109,14 +110,16 @@
 
 	.hero-subtitle {
 		display: block;
+		width: 279px;
 		font-size: var(--font-size-medium);
 		position: relative;
 		margin: 0.25rem 0;
-		font-weight: 700;
+		font-weight: 600;
 	}
 
 	.hero-section p {
 		margin: 2rem 0;
+		width: 335px;
 		line-height: 1.5;
 		font-size: var(--font-size-medium);
 		font-weight: 400;
@@ -151,45 +154,20 @@
 	}
 
 	/* Up to 480px (mobile) */
-	@media (max-width: 480px) {
+	@media (max-width: 480px) { 
 		header {
 			background-position: 44% 50%;
 		}
 
-		/* Drop-Down alignment */
-		.menu-section nav {
-			margin-left: -5px;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.headphones-logo {
-			width: 50%;
-			height: auto;
-			align-self: center;
-		}
-
-		.menu-links {
-			display: none;
-		}
-
-		.menu-links li {
-			width: 100%;
-			margin: 0.5rem auto;
-		}
-
-		.hero-section {
-			margin: 14rem auto 0 auto;
-			width: 100%;
-		}
-
-	/* Drawing three rectangles with "", before, and after */
+		/* Menu Button ===================*/
+		
+		/* middle line */
 		#menu-toggle-btn {
 			background: var(--color-white);
 			height: 2px;
 			width: 13px;
 			position: absolute;
-			left: 1rem;
+			left: -10px;
 			top: 18px;
 			display: block;
 		}
@@ -199,7 +177,7 @@
 			content: "";
 			background: var(--color-white);
 			height: 2px;
-			width: 20px;
+			width: 23px;
 			position: relative;
 			top: -0.4rem;
 			display: block;
@@ -211,31 +189,67 @@
 			content: "";
 			background: var(--color-white);
 			height: 2px;
-			width: 18px;
+			width: 23px;
 			position: relative;
 			top: 0.3rem;
 			display: block;
 			transition: all 0.2s ease;
 		}
 
-		.menu-links {
+
+		/* Nav Bar Alignment */
+		.menu-section nav {
+			margin-left: -5px;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#header-logo {
+			width: 50%;
+			height: auto;
+			align-self: center;
+		}
+		/* Drop Down Menu =============== */
+
+		.menu-nav #menu-links {
+			/* display: none; start with ul hidden */
 			max-height: 0;
+			/* transition: max-height 1s ease-out; */
 			overflow: hidden;
-			transition:  max-height 0.4s ease-in-out;
+			/* margin-bottom: 20px; */
+			/* transition:  max-height 0.4s ease-in-out; */ 
+		}
+		
+		/* space out the links */
+		.menu-nav #menu-links li {
+			width: 100%;
+			margin: 0.5rem auto 10px;
 		}
 
-		#menu-toggle:checked ~ .menu-links {
-				display: inline-flex;
-				width: 100%;
-				flex-direction: column;
-				margin: 1rem auto;
-				text-align: center;
-				font-weight: bold;
-				font-size: var(--font-size-button);
-				max-height: 100px;
-			}
+		/* Once menu toggle input is checked -> open drop down menu */
+		#menu-toggle:checked ~ #menu-links {
+			/* display: block; */
+			width: 100%;
+			flex-direction: column;
+			margin: 1rem auto auto;
+			text-align: center;
+			font-weight: bold;
+			font-size: var(--font-size-large);
+			max-height: 140px;
+			transition: max-height 0.25s ease-in-out;
 		}
 
+		/* #menu-toggle:checked ~ #menu-links a {
+			/* background-color: #FF6565;
+			/* margin: 1rem auto 8rem auto;
+			border-radius: 15%;
+			padding-left: 4px;
+			padding-right: 4px;
+			padding-top: 2px;
+			padding-bottom: 45px;
+		} */
+
+		/* Turning menu button into X button once toggled */
 		#menu-toggle:checked ~ #menu-toggle-btn {
 			background: transparent;
 		}
@@ -249,10 +263,18 @@
 
 		#menu-toggle:checked ~ #menu-toggle-btn::after {
 			background: var(--color-white);
-			width: 20px;
+			width: 23px;
 			transform: rotate(-135deg);
 			top: 1px;
 			margin: auto;
 		}
+
+		/* Hero Alignment ===== */
+		.hero-section {
+			margin: 14rem auto 0 auto;
+			width: 100%;
+			/* margin-top: auto; */
+		}
+
 
 	}
