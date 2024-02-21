@@ -373,7 +373,46 @@
 	.wwd-card p {
 		font-size: var(--font-size-button);
 		color: var(--color-black);
-		width: 100%;
+		/* max-width: 207px; */
 		margin: 0;
 		padding: 0;
+	}
+
+
+/* What we do - Responsive Design ========= */
+
+	/* Tablet ====== */	
+	@media (max-width: 767px) {
+		.wwd-card-container {
+			grid-template-rows: 50% 50%;
+			grid-template-columns: 50% 50%;
+		}
+
+		.wwd-card-container .wwd-card {
+			margin: 1rem;
+		}
+
+		.section-what-we-do p {
+			width: 95%;
+		}
+	}
+	/* Mobile =========== */
+	@media (max-width: 480px) {
+		.section-what-we-do {
+			padding: 4rem 2.5rem;
+		}
+
+		.section-what-we-do p {
+			width: 100%;
+		}
+
+		.wwd-card-container {
+			grid-template-rows: 25% 25% 25% 25%;
+			grid-template-columns: 100%;
+		}
+
+		.wwd-card-container p {
+			width: 70%;
+			margin: auto;
+		}
 	}
