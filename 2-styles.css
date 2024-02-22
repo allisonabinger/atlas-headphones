@@ -298,6 +298,8 @@
 
 	main {
 		background: transparent;
+		display: flex;
+		flex-direction: column;
 		font-family: var(--font-family-primary);
 		width: 100%;
 		position: relative;
@@ -306,13 +308,16 @@
 	/* Title and Subtitle */
 
 	.section-what-we-do {
+		background: var(--color-white);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		color: var(--color-navy);
 		padding-top: 110px;
 		width: 100%;
-		height: 650px;
+		height: auto;
+		margin-bottom: 2rem;
+		overflow: auto;
 	}
 
 	.wwd-text-container {
@@ -400,6 +405,7 @@
 	@media (max-width: 480px) {
 		.section-what-we-do {
 			padding: 4rem 2.5rem;
+			margin-bottom: 2rem;
 		}
 
 		.section-what-we-do p {
@@ -421,16 +427,20 @@
 
 		/* This is where I leave you because I cannot code anymore lol. */
 
-	#res {
+	.section-results {
 		background-image: url(images/headphones_hero_2.jpg);
 		background-size: cover;
+		background-repeat: no-repeat;
 		color: var(--color-white);
+		/* padding: 6rem 4rem; */
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		justify-content: space-around;
-		width: 100%;
-		height: 650px;
+		width: auto;
+		height: auto;
+		/* height: 10rem;
+		padding: 0;
+		position: relative; */
 	}
 
 	.section-results h2 {
@@ -441,23 +451,40 @@
 		margin-top: 141px;
 	}
 
-	.section-results p {
+	#results-p {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		color: var(--text-color);
-		font-family: var(--font-family-body);
+		color: var(--color-white);
 		font-size: var(--font-size-medium);
 		font-weight: 400;
-		/* text-align: center; */
 		width: 637px;
-		margin-left: 382px;
 	}
 
 	.pent-grid {
-		display: flex;
-		justify-content: center;
-		gap: 77px;
-		margin-bottom: 80px;
+		width: 100%;
+		margin: 2rem 0;
+		display: grid;
+		grid-template-rows: 100%;
+		grid-template-columns: 25% 25% 25% 25%;
+		text-align: center;
+	}
+
+
+	/* Responsive Design for Pentagon Grid ====== */
+
+
+	@media (max-width: 767px) {
+		.pent-grid {
+			grid-template-columns: 50% 50%;
+			grid-template-rows: 50% 50%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.pent-grid {
+			grid-template-columns: 100%;
+			grid-template-rows: 25% 25% 25% 25%;
+		}
 	}
