@@ -627,7 +627,7 @@
 		flex-direction: column;
 		align-items: center;
 		background-color: var(--color-navy);
-		height: auto;
+		height: 249px;
 		width: auto;
 	}
 	.footer-row {
@@ -667,5 +667,7 @@
 
 	@media (max-width: 480px)
 	{
-		
+		.footer-container {
+			padding: 3rem 4rem;
+		}
 	}
