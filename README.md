@@ -17,7 +17,7 @@ The designer file that was used as reference can be found in the repository as s
 - SEO
 - KeyFrames
 
-The final product is rendered in 4-index.html, as shown below:
+While each task was originally completed as individual html and css files, I have compiled all the files into a single index.html and styles.css
 
 
 
