@@ -512,7 +512,7 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		align-content: center;
-		padding: 1.5rem;
+		/* padding: 1.5rem; */
 	}
 
 	.section-contact input {
@@ -601,4 +601,19 @@
 
 	#contact-button:hover, #contact-button:active {
 		opacity: 0.9;
+	}
+
+
+	/* Responsive Design for Form === */
+
+	@media (max-width: 767px) {
+		.section-contact input {
+			width: 75%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.section-contact input {
+			width: 95%;
+		}
 	}
